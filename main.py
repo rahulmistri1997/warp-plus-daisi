@@ -1,6 +1,14 @@
 from datetime import datetime
 import urllib.request, json, string, random
 
+def randomString(length):
+	letters = string.ascii_letters + string.digits
+	return ''.join(random.choice(letters) for i in range(length))
+
+def randomDigit(length):
+	digit = string.digits
+	return ''.join((random.choice(digit) for i in range(length)))
+
 def getData(uid):
 	url = f'https://api.cloudflareclient.com/v0a{randomDigit(3)}/reg'
 	install_id = randomString(22)
