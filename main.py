@@ -1,6 +1,8 @@
 from datetime import datetime
 import urllib.request, json, string, random
 
+proxy_enabled = False
+
 def randomString(length):
 	letters = string.ascii_letters + string.digits
 	return ''.join(random.choice(letters) for i in range(length))
